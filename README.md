@@ -1,48 +1,10 @@
-# gettext-handlebars [![build status](https://secure.travis-ci.org/smhg/gettext-handlebars.png)](http://travis-ci.org/smhg/gettext-handlebars)
+# gettext-prado [![build status](https://secure.travis-ci.org/smhg/gettext-prado.png)](http://travis-ci.org/smhg/gettext-prado)
 
-Extract translatable strings from [Handlebars](http://handlebarsjs.com/) template strings.
+Extract translatable strings from [Prado](http://www.pradoframework.net) Localization Tags (i.e. `<%[string]%>`).
 
 It can be used stand-alone or through [xgettext-template](https://github.com/gmarty/xgettext).
 
 ### API
-
-#### new Parser(keywordSpec)
-Creates a new parser.
-The `keywordSpec` parameter is optional, with the default being:
-```javascript
-{
-  _: {
-    msgid: 0
-  },
-  gettext: {
-    msgid: 0
-  },
-  dgettext: {
-    msgid: 1
-  },
-  dcgettext: {
-    msgid: 1
-  },
-  ngettext: {
-    msgid: 0,
-    msgid_plural: 1
-  },
-  dngettext: {
-    msgid: 1,
-    msgid_plural: 2
-  },
-  pgettext: {
-    msgctxt: 0,
-    msgid: 1
-  },
-  dpgettext: {
-    msgctxt: 1,
-    msgid: 2
-  }
-}
-```
-Each keyword (key) requires an object with argument positions. The `msgid` position is required. `msgid_plural` and `msgctxt` are optional.
-For example `gettext: {msgid: 0}` indicates that the Handlebars expression looks like `{{gettext "string"}}`.
 
 #### .parse(template)
 Parses the `template` string for Handlebars expressions using the keywordspec.
@@ -66,7 +28,7 @@ It returns an object with this structure:
 
 #### Install
 ```shell
-git clone git@github.com:smhg/gettext-handlebars.git
+git clone git@github.com:smhg/gettext-prado.git
 npm i
 ```
 
