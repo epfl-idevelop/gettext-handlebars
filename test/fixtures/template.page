@@ -1,0 +1,51 @@
+<com:TContent ID="Main">
+    
+    <com:TClientScript>
+    function selectValues(field) {
+        for (var i = 0; i < field.options.length; i++) {
+            field.options[i].selected = true;
+        }	
+    }
+    </com:TClientScript>
+    
+    <com:OngletsDemande ID="myOnglets" />
+    
+    <div class="demande-decision-container">
+        <div class="form">
+            <h1><com:TSafeHtml><com:TLabel ID="dem_titre" /></com:TSafeHtml></h1>
+            <div class="step-block">
+                <div class="step-block-header">
+                    <h2><%[Interdire l'accès à cette demande pour les utilisateurs suivants]%></h2>
+                </div>
+                
+                <com:autocompletePersonneMulti Id="blockedPersonne" />
+                
+                <com:TPanel CssClass="submit-button">
+                    <com:TButton ID="save_exclus" Text="<%[Enregistrer les exclusions]%>" 
+                                 OnClick="saveBlocked"
+                                 CssClass="submit-btn" />
+                    <com:TValidationSummary HeaderText="<%[Merci de compléter les champs ci-dessus]%>" />
+                </com:TPanel>
+
+                <br/><br/> <br/><br/>
+                <div class="step-block-header">
+                    <h2><%[Définir les experts et leur autoriser l'accès au fichier de cette demande]%></h2>
+                </div>
+                
+                <com:autocompletePersonneMulti Id="expertPersonne" />
+                
+                <com:TPanel CssClass="submit-button">
+                    <com:TButton ID="save_expert" Text="<%[Enregistrer les experts]%>" 
+                                 OnClick="saveExperts"
+                                 CssClass="submit-btn" />
+                    <com:TValidationSummary HeaderText="<%[Merci de compléter les champs ci-dessus]%>" />
+                </com:TPanel>
+	
+            </div>
+        </div>
+        <div class="resume">
+            <com:ResumeDemande ID="myResumeDemande" />
+        </div>
+    </div>   
+
+</com:TContent>
