@@ -4,24 +4,20 @@ Extract translatable strings from [Prado](http://www.pradoframework.net) Localiz
 
 It can be used stand-alone or through [xgettext-template](https://github.com/gmarty/xgettext).
 
-### API
+### How To
+1. Install [xgettext-template](https://github.com/gmarty/xgettext):
+```
+npm i xgettext-template -g
+```
 
-#### .parse(template)
-Parses the `template` string for Handlebars expressions using the keywordspec.
-It returns an object with this structure:
-```javascript
-{
-  msgid1: {
-    line: [1, 3]
-  },
-  msgid2: {
-    line: [2],
-    plural: 'msgid_plural'
-  },
-  context\u0004msgid2: {
-    line: [4]
-  }
-}
+1. Install [gettext-prado](https://github.com/epfl-idevelop/gettext-prado)
+```
+npm update gettext-prado -g
+```
+
+1. Run xgettext specifying the language:
+```
+xgettext-template --from-code utf-8 -L prado -o messages.pot
 ```
 
 ### Development
