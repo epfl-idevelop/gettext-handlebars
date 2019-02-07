@@ -1,7 +1,7 @@
 {
-  "name": "gettext-handlebars",
-  "version": "0.7.0",
-  "description": "Extract translatable strings from Handlebars templates",
+  "name": "gettext-prado",
+  "version": "0.0.1",
+  "description": "Extract translatable strings from Prado templates",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,27 +14,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/smhg/gettext-handlebars.git"
+    "url": "https://github.com/epfl-idevelop/gettext-prado.git"
   },
   "keywords": [
-    "handlebars",
+    "prado",
     "gettext",
-    "hbs",
     "i18n",
     "translate",
     "translation"
   ],
-  "author": "Sam Hauglustaine",
+  "author": "EPFL IDEV-FSD <idev-fsd@groupes.epfl.ch>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/smhg/gettext-handlebars/issues"
+    "url": "https://github.com/epfl-idevelop/gettext-prado/issues"
   },
-  "homepage": "https://github.com/smhg/gettext-handlebars",
+  "homepage": "https://github.com/epfl-idevelop/gettext-prado",
   "devDependencies": {
     "eslint": "3.13.0",
     "mocha": "3.2.0"
-  },
-  "dependencies": {
-    "handlebars": "4.0.6"
   }
 }
