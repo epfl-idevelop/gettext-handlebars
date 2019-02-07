@@ -1,7 +1,5 @@
 'use strict';
 
-var Handlebars = require('handlebars');
-
 function Parser () {
   // make new optional
   if (!(this instanceof Parser)) {
